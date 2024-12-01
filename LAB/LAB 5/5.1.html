@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://161.246.5.61/Lab.js"></script>
+    <link rel="stylesheet" href="5.1.css">
+</head>
+<body>
+
+    <div class="tableContainer">
+        <div class="divTableContainerleft">
+                <div class="divRow">
+                    <div class="divcell" style="background-color: skyblue;"><p><img src="valo.png" class="img"></p></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: skyblue;"><h3>Profile:</h3></div>        
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: skyblue;"><textarea id="profile" style="width: 80%"></textarea></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: skyblue;"><p></p></div>
+                </div>
+                <div class="divrowspace">
+                    <div class="divCell" style="background-color: skyblue;"><h3 class="left">Address:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: skyblue;"><input type="text" placeholder="Maple Street" id="street" style="width: 80%"></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: skyblue;"><input type="text" placeholder="California" id="city" style="width: 80%;"></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: skyblue;"><select id="country" style="width: 80%;"></select></div>
+                </div>
+                <div class="divrowspace">
+                    <div class="divCell" style="background-color: skyblue;"><h3 class="left">Contacts:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: skyblue;"><h3 class="left">Reference:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: skyblue;"><textarea id="ref" style="width: 80%;"></textarea></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: skyblue;"><h3 class="left">Favourite colour:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: skyblue;"><p></p></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell"><input type="color" id="favColour" style="width: 80%;"></div>
+                </div>
+        </div>
+        <div class="divTableContainerright">
+                <div class="divRow">
+                    <div class="divCell" style="background-color: yellow;"><h3 class ="left">Personal Information:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: yellow;"><h3 class ="left">Name:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: yellow;"><h3 class = "right"><input type="text" id="name" style="width: 100%;"><br><br></h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: yellow;"><h3 class="left">Age:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: yellow;"><input type="range" id="age" style="width: 100%;"></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: yellow;"><h3 class="left">Email:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: yellow;"><input type="email" id="email" style="width: 100%;"></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell"style="background-color: yellow;"><h3 class="left">Phone:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: yellow;"><input type="tel" id="phone"><br><br></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: green;"><h3 class="left">Education:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: green;"><h3 class="left">University:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: green;"><input type="text" id="university" placeholder="KMITL" style="width: 50%;"></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: green;"><h3 class="left">Degree:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: green;"><input type="text" id="degree" placeholder="Software Engineer" ></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: green;"><h3 class="left">Year of graduation:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: green;"><input type="date" id="graduationYear"></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: pink;"><h3 class="left">Skill and Experience:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: gray;"><h3 class="left">Skill:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: gray;"><textarea id="skills"></textarea></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: gray;"><h3 class="left">Experience:</h3></div>
+                </div>
+                <div class="divRow">
+                    <div class="divCell" style="background-color: gray;"><textarea id="experience"></textarea></div>
+                </div>
+        </div>
+    </div>
+    
+    <input type="submit" value="Submit" onclick="displayResume()">
+</body>
+</html>
