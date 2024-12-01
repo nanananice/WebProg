@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="cal_styles.css">
+    <script src="calstuff.js"></script>
+</head>
+
+<body>
+    <table id="myTable">
+        <tr>
+            <td colspan="4" style="text-align: right;">
+                <label id="result"></label>
+            </td>
+        </tr>
+        <tr>
+            <td id="Backspace">&lt</td>
+            <td id="/">/</td>
+            <td id="*">*</td>
+            <td id="-" style="font-family: 'Courier New', Courier, monospace; font-weight:bold;">-</td>
+        </tr>
+        <tr>
+            <td id="7">7</td>
+            <td id="8">8</td>
+            <td id="9">9</td>
+            <td id="+" rowspan="2">+</td>
+        </tr>
+        <tr>
+            <td id="4">4</td>
+            <td id="5">5</td>
+            <td id="6">6</td>
+        </tr>
+        <tr>
+            <td id="1">1</td>
+            <td id="2">2</td>
+            <td id="3">3</td>
+            <td id="Enter" rowspan="2">=</td>
+        </tr>
+        <tr>
+            <td id="0" colspan="2">0</td>
+            <td id="c" style="font-weight: bold;">C</td>
+        </tr>
+    </table>
+    <script>
+        const output = document.getElementById('result');
+
+        document.addEventListener('keypress', (event) => {
+            if(event.key == '0') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '1') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '2') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '3') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '4') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '5') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '6') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '7') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '8') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '9') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '+') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '-') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '*') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '/') {
+                output.innerHTML += event.key;
+            }
+            else if(event.key == '<'){
+                    output.innerHTML = output.innerText.slice(0,-1);
+            }
+            else if(event.key == 'c' || event.key == 'C') {
+                output.innerHTML = '';
+            }
+            else if(event.key == '=') {
+                output.innerHTML = eval(output.innerHTML);
+            }
+        });
+    </script>
+</body>
+
+</html>

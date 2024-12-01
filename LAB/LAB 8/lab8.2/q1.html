@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Timer</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            margin: 10px;
+        }
+        table td, table th{
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Online Timer</h1>
+    <div id="current-time">
+
+    </div>
+    <form action="#">
+        <label for="time">Select Time</label><input type="date" name="time" id="time"><br>
+        <input type="button" value="Edit" id="edit">
+        <div id="alert-table">
+
+        </div>
+        <div class="filehandle">
+            <label for="import">Import Schedule: </label><input type="file" name="import" id="import"><br>
+        </div>
+        <div class="buttons">
+            <input type="button" value="Save Schedule" id="save"><br>
+            <input type="button" value="Export Schedule" id="export">
+        </div>
+    </form>
+    <script src="q1.js"></script>
+</body>
+</html>
