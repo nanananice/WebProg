@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Software Engineer | KMITL</title>
+    <link rel="stylesheet" type="text/css" href="/static/curriculum.css">
+    <link rel="icon" type="image/x-icon" href="/static/sehead.png"> 
+    <script>
+        function toggleMenu() {
+        var navDrawer = document.getElementById("nav-links");
+        var navOverlay = document.getElementById("nav-overlay");
+
+        if (navDrawer && navOverlay) {
+            if (navDrawer.style.left === "0px") {
+                navDrawer.style.left = "-250px";
+                navOverlay.style.display = "none";
+            } else {
+                navDrawer.style.left = "0px"; 
+                navOverlay.style.display = "block";
+            }
+        } else {
+            console.error('Element(s) not found!');
+        }
+    }
+    window.addEventListener('resize', function () {
+    if (window.innerWidth > 780) {
+        var navLinks = document.getElementById("nav-links");
+        var navOverlay = document.getElementById("nav-overlay");
+        navLinks.style.left = "-250px";
+        navOverlay.style.display = "none";
+        }
+        });
+    </script>            
+</head>
+<body>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'trans');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div class="navbar">
+        <a href="/" class="navbar-logo"><img src="/static/se.png" alt="Logo"></a>
+        <div id="trans"></div>
+        <button class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="/news">News</a>
+            <a href="/addmission1">Admission</a>
+
+            <a href="/about">About</a>
+            <a href="/curriculum">Curriculum</a>
+            <a href="/reservepage">Reserve Co-Working Space</a>
+            <a href="{{ '/logout' if is_logged_in else '/login' }}" class="login-button">{{ 'Logout' if is_logged_in else 'Login' }}</a>
+        </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay" onclick="toggleMenu()"></div>
+    <div>
+        <div class="curriculum-container">
+            <h1>B.Eng. in Software Engineering Program</h2>
+            <p>The <b>B.Eng. in Software Engineering Program</b> is a 4-year undergraduate program aiming at producing graduates who are capable of working confidently in the international software industry as well as pursuing postgraduate 
+                study and research in leading universities worldwide. The curriculum of the program is designed in accordance with the recent ACM/IEEE guideline for undergraduate curriculum in software engineering.
+            </p>
+            <h2>Program Structure</h2>
+            <img src="/static/program structure.png">
+            <h2>Year 1 and Year 2 </h2>
+            <p>
+                In the first two years, the students will study basic courses in mathematics, computer science, and software engineering and develop their programming skills using various programming languages (including Python, C, C++, Java, etc.). Also, the students will be trained to communicate correctly and effectively. At the end of Year 2, 
+                every student is required to undertake an internship in a software company for 8 - 10 weeks. All the courses in the first two years will be held at the International College in the Bangkok Campus of KMITL.
+            </p>
+            <h2>Year 3 and Year 4 (KMITL)</h2>
+            <p>
+                In Year 3 and Year 4, the students will learn advanced topics in software engineering and important software development methodologies that are used in practice. The students will have opportunities to the apply the knowledge and skills they have acquired to conduct a team software project in Year 3 and a one-year research project in Year 4. 
+                Students entering Year 3 are required to take one of the following specializations:
+            </p>
+            <ol>
+                <li><b>Enterprise Software Engineering</b> - Specializing inlarge and complex software for enterprises and distributed systems</li>
+                <li><b>Internet of Things</b> - Specializing in the Internet of Things, including embedded and mobile systems</li>
+                <li><b>Intelligent Systems</b> - Specializing in applications of artificial intelligence and data science, including machine learning and Big Data
+                    The study plans for these three specializations differ in some required courses. Also the students are recommended to 
+                    toe work on their senior projects that utilize the knowledge of their respective specializations.</li>
+            </ol>
+            <h2>Year 3 and Year 4 (KMITL-Glasgow Double-Degree Program)</h2>
+            <p>The students joining the KMITL-Glasgow Double-DegreeProgram will take courses in Years 3 and 4 in the Software Engineering program at the Schoolof Computing Science, University of Glasgow.</p>
+            <h1>Curriculum</h1>
+            <div class="year-container">
+                <button class="collapsible">Year 1</button>
+                <div class="content">
+                    <h3>Semester 1</h3>
+                    <button class="collapsible inner-collapsible">13006007: Calculus1</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> None
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006107: Introduction to Computers and Programming</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 4 (3-2-7)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course provides an introduction to basic components of a computer and computer operation, the history and the evolution of computers, an introduction to a programming language, basics of computer programming using structured and object-oriented approaches, and some examples of computer programming to serve various purposes.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                        <button class="collapsible inner-collapsible">13006108: Basic Electricity and Electronics</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> None<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (2-2-5)
+                            </p>
+                            <p>
+                                <b>Description: </b> This course teaches the students to understand basic principles of electricity and electronics. Topics studied include basic concepts of electric circuits, resisters, capacitors, inductors, solid-state devices, diode and rectifiers, and transistors.
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <button class="collapsible inner-collapsible">13006208: Academic English</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> None<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                            </p>
+                            <p>
+                                <b>Description: </b> This course trains the students’ skills of English language for academic purposes, covering all essential skills for studying at university (reading, writing, listening, and speaking).\nThe students taking this course are expected to have their English language proficiency at the level equivalent to the IELTS (Academic) score of 5.5.\nBy the end of the course, they are expected to be at the level equivalent to IELTS (Academic) score of 6.0 or higher.
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <button class="collapsible inner-collapsible">13006301: Introduction to Logic</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> None<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                            </p>
+                            <p>
+                                <b>Description: </b>  This course provides a study of the nature of logic and logical reasoning, covering the following topics: arguments, syntax and semantics of propositional logic, validity and equivalence in propositional logic, truth tables, basic proof theory for propositional logic, syntax and semantics of first-order logic, validity and equivalence in first-order logic, basic proof theory for first-order logic, limitations of first-order logic, and applications of logic for problem solving.
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <button class="collapsible inner-collapsible">13006235: C Programming</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> None<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                            </p>
+                            <p>
+                                <b>Description: </b> This is an introductory course in computer programming using the C language. Emphasis is placed on developing the students’ abilities in the design and implementation of algorithms.\nThe course describes the fundamentals of program design and implementation in C, variables and data types, input and output statements, conditional statements, loop statements, modularity, parameter passing, pointers, arrays and complex arrays, strings, user-defined types, file processing, and program testing and debugging techniques.
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <button class="collapsible inner-collapsible">13006236: C Programming Lab</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> None<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 1 (0-3-2)
+                            </p>
+                            <p>
+                                <b>Description: </b>  Laboratory exercises supplementing 13016235 C Programming.
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <h3>Semester 2</h3>
+                        <button class="collapsible inner-collapsible">13006008: Calculus2</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> 13006007 Calculus 1 of Software-Engineering by
+                                <br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                            </p>
+                            <p>
+                                <b>Description: </b> None
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <button class="collapsible inner-collapsible">13006209: Academic English 2 </button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> 13006208 Academic English of Software-Engineering b<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                            </p>
+                            <p>
+                                <b>Description: </b> This course trains the students’ skills of English language for academic purposes, covering all essential skills for studying at university (reading, writing, listening, and speaking). The students taking this course are expected to have their English language proficiency at the level equivalent to the IELTS (Academic) score of 6.0. By the end of the course, they are expected to be at the level equivalent to IELTS (Academic) score of 6.5 or higher.
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <button class="collapsible inner-collapsible">130063_: Elective in Humanity</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> None<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                            </p>
+                            <p>
+                                <b>Description: </b> None
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <button class="collapsible inner-collapsible">13006105: Discreate Mathematics</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> None<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                            </p>
+                            <p>
+                                <b>Description: </b> This is an introductory course in discrete mathematics, covering the following topics: basic set theory, theory and techniques of counting, properties of integers, mathematical induction, recursive definitions, recurrent equations, sequences and summations, relations, graphs, and trees.
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <button class="collapsible inner-collapsible">13006204: Digital Circuit and Logic Design</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> None<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                            </p>
+                            <p>
+                                <b>Description: </b> This course covers the following topics: basic theory of switching circuit, Boolean algebra, truth table, Boolean equation reduction by Karnaugh mapping and Quine–McCluskey method, Venn diagram, logic gates, flip-flops, counters, shift registers, and combinational and sequential circuit design.
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <button class="collapsible inner-collapsible">13006205: Digital Circuit and Logic Design Lab</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> None<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 1 (0-3-2)
+                            </p>
+                            <p>
+                                <b>Description: </b> Practical study related to 13016204 Digital Circuit and Logic Design
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <button class="collapsible inner-collapsible">13006209: OOP</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> 13016235 C Programming of Software-Engineering by
+                                Program : Software-Engineering<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                            </p>
+                            <p>
+                                <b>Description: </b> This course introduces object-oriented concepts and methodology and studies object-oriented programming using C++. Topics covered include objects, classes, encapsulation, inheritance, multiple inheritance, polymorphism, abstract classes, static class members, object construction and destruction, namespaces, function overloading, function overriding, exception handling, template classes, and container classes. This course also covers basic techniques for testing and debugging object-oriented programs.
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                        <button class="collapsible inner-collapsible">13006209: OOP Lab</button>
+                        <div class="inner-content">
+                            <p><b>Prerequisite :</b> 13016235 C Programming of Software-Engineering by
+                                Program : Software-Engineering<br>
+                            <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 1 (0-3-2)
+                            </p>
+                            <p>
+                                <b>Description: </b> Practical study related to 13016209 Object-Oriented Concepts and Programming
+                            </p>
+                            <p>
+                                <b>Lecturer: </b><br>
+                                <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                            </p>
+                        </div>
+                </div>            
+                <button class="collapsible">Year 2</button>
+                <div class="content">
+                    <h3>Semester 1</h3>
+                    <button class="collapsible inner-collapsible">13006210: Technical Writing</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13006209 Academic English 2 of Software-Engineering by
+                            Program : Software-Engineering<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course provides a study and practice of academic writing skills in English language. By the end of the course, the students are expected to be able to compose clear and effective technical writings, including technical essays, reports, and articles, with correct and appropriate usage of the language.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">130064_: Elective in Social Study</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> An elective course in Social Study
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006207: Computer Organization and Assembly Language</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016204 Digital Circuit and Logic Design of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course studies the basics of microcomputer architectures and instruction execution. The topics covered include microprocessor structures, registers, bus technology, memory hierarchy, main memory, cache memory, storage devices, and peripheral devices. The course also covers assembly language programming, including instruction sets, addressing modes, and instruction decoding.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006208: Computer Organization and Assembly Language Lab</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b>  1 (0-3-2)
+                        </p>
+                        <p>
+                            <b>Description: </b> Practical study related to 13016207 Computer Organization and Assembly Language
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006211: Advance OOP</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016209 Object-Oriented Concepts and Programming of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-2-7)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course covers advanced concepts of object-oriented programming, with emphasis on principles and practices for the design and implementation of large and complex programs. The course covers the following topics: design and implementation principles to support software reuse, basic design patterns, exception handling, event-driven programming, development of programs with graphical user interface, multithread programming, and the use of tools to assist debugging and testing programs. Students are encouraged to learn to utilize classes from standard or third-party libraries by studying from the documentation of those libraries.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006212: Data Structure and Algorithms</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b>  13016209 Object-Oriented Concepts and Programming of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> The course studies basic data structures and their related operations as well as an introduction to the analysis of algorithms. Topics include arrays, stacks, queues, lists, hash tables, trees, heaps, graphs, time and space complexity analysis of algorithms, asymptotic notations, iterative and recursive algorithms, and algorithms for sorting and searching and their complexity.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006213: Data Structure and Algorithms Lab</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016209 Object-Oriented Concepts and Programming of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 1 (0-3-2)
+                        </p>
+                        <p>
+                            <b>Description: </b> Practical study related to 13016212 Data Structures and Algorithms
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006241: Computer Network and Communication</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016212 Data Structures and Algorithms of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course provides an overview of computer networks and communications, covering the following topics: computer network reference models such as OSI and TCP/IP, basics of wired and wireless digital communications, concepts of peer-to-peer communications, LAN and WAN (such as Ethernet and ATM), network layer design issues, routing algorithms, congestion control methodologies, standards and examples of network protocols, transport layer design issues, quality of services, standards and examples of transport protocols (such as TCP and UDP), network security, and computer network applications (such as the Internet, emails, World Wide Web, and the voice and video communications over computer networks).
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <h3>Semester 2</h3>
+                    <button class="collapsible inner-collapsible">13006009: Probability And Statistic</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13006007 Calculus 1 of Software-Engineering by
+                            Program : Software-Engineering<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> None
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006211: Technical Communication and Presentation</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13006209 Academic English 2 of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course provides a study and practice of technical communication and presentation skills in English. The course studies how to communicate and make a presentation clearly and effectively, with correct and appropriate usage of the language. The students are trained to communicate on technical topics through conversations and written correspondence (such as letters or emails), give public speeches and lectures on technical topics, and discuss in a seminar. The course will also study techniques in creating and delivering effective presentations.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006214: Software Engineer Principle</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016212 Data Structures and Algorithms of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course studies important principles and concepts of software engineering, as well as an overview of software development processes. Topics include software development processes, requirements and specifications of software, structured and object-oriented software design, software verification and validation, software project management, software evolution and maintenance, and computer-aided software engineering (CASE) tools.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006215: Software Engineer Principle Lab</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016212 Data Structures and Algorithms of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b>  1 (0-3-2)
+                        </p>
+                        <p>
+                            <b>Description: </b> Practical study related to 13016214 Software Engineering Principle
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006237: Information System and Databaases</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016212 Data Structures and Algorithms of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course studies basic concepts of information systems and database systems, with emphasis on the study of relational database systems. Topics include basic concepts of information systems and database systems, types of data models, relational database design, entity-relationship models, normal forms of relational databases, and database query languages.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006239: Algorithm Design and Analysis</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b>  13016212 Data Structures and Algorithms of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course provides a study of theories and techniques of algorithm design and analysis. For algorithm design, students will study a wide range of algorithmic solutions to problems from various application areas, including searching, sorting, optimization, and important problems in graph theory. In addition, important design paradigms will be covered including greedy methods, divide-and-conquer methods, dynamic programming, backtracking, and branch-and-bound methods. For algorithm analysis, students will practice analyzing the execution time and the resource consumption of algorithms, and related mathematical techniques.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006242: Computer Networks and Communication Lab</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016212 Data Structures and Algorithms of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 1 (0-3-2)
+                        </p>
+                        <p>
+                            <b>Description: </b> Practical experiments related to 13016241 Computer Networks and Communications
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006248: Seminar in Software Engineer</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 0 (0-3-0)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course requires the students to attend seminars, lectures, and/or talks, given by invited speakers who are well-known in the software industry or in research and development in computing-related areas. The students are required to submit a written report summarizing what they have learned from each seminar.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                </div>            
+                <button class="collapsible">Year 3</button>
+                <div class="content">
+                    <h3>Semester 1</h3>
+                    <button class="collapsible inner-collapsible">13016216: Operating System</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016212 Data Structures and Algorithms of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b>  This course studies basic principles and concepts of operating systems. Topics include structures of operating systems, process management, processor scheduling, process synchronization, inter-process communication, semaphores and monitors, mutual exclusion, deadlock detection and prevention, memory management, virtual memory, file systems, I/O systems, secondary storage management, user account management, and operating system security. The course also studies and compares among important operating systems.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13016219: Object-Oreiented Analysis and Design</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course covers the principles and methodology of object-oriented analysis and design, with emphasis on the use of the Unified Modeling Language (UML), and also the object-oriented development methodology under the unified process. Students will study how to utilize various UML diagrams as well as several design patterns in software analysis and design processes.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">1301220: Object-Oreiented Analysis and Design Lab</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016214 Software Engineering Principle of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 1 (0-3-2)
+                        </p>
+                        <p>
+                            <b>Description: </b> Practical study related to 13016219 Object-Oriented Analysis and Design
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13016223: AI</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016212 Data Structures and Algorithms of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> The course covers the following topics: meanings of artificial intelligence, various knowledge representations (including semantic networks, frames, rules, logic, etc.), problem solving by search (including uninformed search and heuristic search), playing games using search, elementary logic, logical reasoning, knowledge-based systems, rule-based systems, expert systems, machine learning, planning, intelligent agents, and programming languages for artificial intelligence.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">130063_: Theory of Computation</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016105 Discrete Mathematics of Software-Engineering by
+
+                            Program : Software-Engineering<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course provides an introduction to the theory of computation, covering the following topics: strings and languages, finite automata, equivalence of deterministic finite automata and nondeterministic finite automata, regular languages, regular expressions, regular grammars, relations between regular languages and regular grammars, properties of regular languages, pumping lemma for regular languages, context-free grammar, pushdown automata, relations between pushdown automata and context-free languages, properties of context-free languages, pumping lemma for context-free languages, Turing machines, equivalence of nondeterministic Turing machines and deterministic Turing machines, undecidable problems, computational complexity, important complexity classes (such as P, NP, and EXPTIME), reduction, and complete complexity classes.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible"><p style="color: red;">For Enterprise Software Engineering</p>13016344 Web Programming</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016241 Computer Networks and Communications of Software-Engineering by
+                            <br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course provides a foundation of current and future web technologies, which include the development of web applications and services, web components, and network protocols necessary for web programming. The course begins with the basics such as markup languages HTML and XML, HTTP protocol and the mechanism of how a web server handles requests, web programming languages, cookies, session management, database integration, performance tuning, and security issues concerning the web applications. This course emphasizes on both client-side programming using JavaScript and server-side programming using Python. Finally this course introduces web service development and semantic web technology.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible"><p style="color: red;">For Intelligent Systems</p>13016364 Machine Learning</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016212 Data Structures and Algorithms of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> Study fundamental concepts of learning and well-known machine learning algorithms. The subject covers the following topics: fundamental probability theory; learning theory; bias/variance trade-off; Vapnik-Chervonenkis theory; supervised/unsupervised learning; generative/discriminative learning; parametric/non-parametric learning; reinforcement learning; applications of machine learning.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible"><p style="color: red;">For Enterprise Software Engineering</p>13016384 Database Systems </button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016237 Information Systems and Databases of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course studies the structures and mechanisms of database management systems, physical structures of databases, access mechanisms, query processing, transaction processing, database recovery, concurrency control, distributed database systems, and object-oriented database systems.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible"><p style="color: red;">For Internet of Things</p>13016384 Microprocessors and Interfaceing</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016204 Digital Circuit and Logic Design of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (2-2-5)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course studies some architectures of the microprocessors and microcontrollers, which are widely used in embedded systems, as well as peripherals interfacing, and software development on those architectures. The topics include the architectures of microprocessors and microcontrollers in embedded systems, memory interfacing, buses, interrupts, interfacing with input/output devices, the conversion between analog signals and digital signals, interfacing with sensors and actuators, and data communication through ports (such as RS-232 ports, USB ports, and parallel ports).
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible"><p style="color: red;">For Intelligent Systems</p>13016394 Big Data</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016237 Information Systems and Databases of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b>The course provides an overview of the challenges of big data and existing solutions. Covered in this course include an introduction to the following topics: data capturing, storage, processing, retrieval, analysis, and visualization. The students will also learn some useful software tools or libraries for processing or analyzing big data.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <h3>Semester 2</h3>
+                    <button class="collapsible inner-collapsible">13016226: Compiler Contruction</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016212 Data Structures and Algorithms of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course studies theories and concepts for constructing computer language translators. The topics include lexical analysis, syntax analysis, parser construction, syntax-directed translation, type checking, run-time environment handling, intermediate and machine code generation and code optimization, interpreter construction, together with case studies of compiler design and construction for some computer languages.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13016228: Software Design and Architecture</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016214 Software Engineering Principle of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b>  This course provides an introduction to software design with emphasis on architectural design and models of software architectures. Software architectures studied include: data flow architectures, procedure-based architectures, middleware architectures, object-oriented architectures, event-driven architectures, virtual machine architectures, component-based architectures, shared information system architectures, client-server architectures, distributed architectures, enterprise architectures, web-based architectures, service-oriented architectures, grid architectures, and mixed architectures. For each architectural style studied, the course discusses the technological background of its evolution, its advantages and disadvantages, and its uses in the software development.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13016230: Software Development Process</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016214 Software Engineering Principle of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> A software development process is a set of activities, methods, and practices that are used in the production and maintenance process of software. This course is concerned with improving the processes used to develop and maintain high-quality software in a timely and economical manner. It covers the evolutions of different software development models and the currently popular and successful process models, including iterative software development (e.g. spiral models and the Rational Unified Process (RUP)), agile software development (e.g. Extreme Programming (XP), Agile Modeling (AM), Scrum, Crystal, Feature Driven Development (FDD), and Incremental Funding Method (IFM)), software maturity frameworks and software process improvement (e.g. the Capability Maturity Model (CMM) and the Personal Software Process (PSP)).
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13016294: Team Software Project</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016214 Software Engineering Principle of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (0-9-5)
+                        </p>
+                        <p>
+                            <b>Description: </b> This is a software project course in which the students work in group to develop software according to the requirements provided by the users. The students will learn to integrate their knowledge and skills to perform each phase of software development, including requirement analysis, modeling, design, implementation, and testing, in order to obtain the required software, whose topic is decided by the advisor(s) or by the students themselves.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible"><p style="color: red;">For Enterprise Software Engineering</p>13016386 Enterprise Software Development </button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016214 Software Engineering Principle of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course studies the design and development of large-scale software for enterprises. The students will learn important design considerations and some important architectures (including enterprise architecture) for enterprise software, learn how to interoperate between the software sub-systems, e.g. via web services and some standard of data interchange, and make this interoperability secure, and also learn how to utilize software frameworks and technologies to support the development of enterprise software.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible"><p style="color: red;">For Internet of Things</p>13016390 Embedded System Software </button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b>13016389 Microprocessors and Interfacing of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (2-2-5)
+                        </p>
+                        <p>
+                            <b>Description: </b>  This course covers the following topics: basic structures of the hardware and the software on embedded systems for various applications, design considerations for software on embedded systems (including resource constraints, energy consumption, time constraints, reliability, and fault tolerance), requirement specifications for software on embedded systems, methodologies and tools for the design and development of embedded software, operating systems for embedded systems, device drivers, and verification and validation techniques for software on embedded systems.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible"><p style="color: red;">For Internet of Things</p>13016391 Computer Networking for the Internet of Things</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b>13016241 Computer Networks and Communications of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> With very limited memory and processing power as well as low energy consumption of IoT (Internet of Things) devices, their communication networks are so designed and developed to meet these constraints. This course will focus on the emerging industrial standard of computer networks and communications technologies developed specifically for IoT devices, including network architectures and protocols layers. Another important topic covered by this course is network security for IoT communication. It is the study how to make secure communications between IoT devices by incorporating encryption into the communication protocol. Widely use encryption techniques are also studied.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible"><p style="color: red;">For Intelligent Systems</p>13016395 Computational Intelligence</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b>13016212 Data Structures and Algorithms of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b>Study of concepts, algorithms, and theories related to computational intelligence. The subject covers the following topics: neural networks, fuzzy logic, evolutionary computation, swarm intelligence, other natured-inspired algorithms, and applications of computational intelligence.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible"><p style="color: red;">For Intelligent Systems</p>13016395 Knowledge Representation and Reasoning</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b>13016223 Artificial Intelligence of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b>This course provides a comprehensive study of contemporary techniques and languages for knowledge representation and reasoning about knowledge. The course covers semantic modeling, e.g. semantic networks, conceptual graphs, ontology representation in Semantic Web, frame representation, rule-based representation, and logical representation, e.g. first-order logic, description logic, logic of actions and beliefs. For the reasoning about knowledge, the topics include abduction, deduction, induction, as well as reasoning about time, state, events, actions, and beliefs.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                </div>            
+                <button class="collapsible">Year 4</button>
+                <div class="content">
+                    <h3>Semester 1</h3>
+                    <button class="collapsible inner-collapsible">13_____: Free Elective</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> Any course offered at the International College
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006224: Software verification and Validation</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016214 Software Engineering Principle of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course studies three important methods for software verification and validation: testing, peer reviews, and formal verification, with emphasis on testing. Topics on testing include the necessity and limitations of testing, an overview of test processes, testing throughout the software development life cycle, unit testing, test design techniques, test automation, tool support for testing, and test management. The course will study how software peer reviews, which can help detect and prevent software defects, are carried out in practice and study the inspection processes throughout the software development life cycle, including the inspection of requirement documents, design documents, code, and test plans. The course will also provide a basic understanding of formal verification, including how to prove the correctness of a simple program using Hoare logic.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13016243: Human-Computer Interaction</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016214 Software Engineering Principle of Software-Engineering by<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course studies fundamental concepts of human perception, ergonomics, cognition, and psychology of the interaction between human and computer systems, and also covers the following topics on the design of interactive software: requirement analysis for interactive software, principles and techniques of user interface design, types of input devices, choosing appropriate input devices, and validation and usability evaluation of interactive software.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13016291: Software Project 1</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (0-9-5)
+                        </p>
+                        <p>
+                            <b>Description: </b> In this course, the students will conduct their independent study, research and development of computer software using software engineering methodology. The students will be guided by their project supervisor to conduct research and software development with the aim that they can develop their own original work with their creativity and problem solving skills. The required project report must be submitted and presented to the examination committee at the end of the semester.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">130163_: Major Elective</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (x-x-x)
+                        </p>
+                        <p>
+                            <b>Description: </b> None
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <h3>Semester 2</h3>
+                    <button class="collapsible inner-collapsible">13_____: Free Elective</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> Any course offered at the International College
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13006401: Computer Ethics and Law</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (3-0-6)
+                        </p>
+                        <p>
+                            <b>Description: </b> This course provides a study of social, legal and moral issues raised by the development of information technology. The course examines the relationship between law, policy and technology related to current issues, including intellectual property, privacy, computer crime and various risks which may cause damages associated with computer usage.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">13016291: Software Project 2</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> 13016291 Software Project 1 of Software-Engineering by
+
+                            Program : Software-Engineering<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (0-9-5)
+                        </p>
+                        <p>
+                            <b>Description: </b> In this course, the students will conduct their independent study, research and development of computer software using software engineering methodology. The students will be guided by their project supervisor to conduct research and software development with the aim that they can develop their own original work with their creativity and problem solving skills. The required project report must be submitted and presented to the examination committee at the end of the semester.
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                    <button class="collapsible inner-collapsible">130163_: Major Elective</button>
+                    <div class="inner-content">
+                        <p><b>Prerequisite :</b> None<br>
+                        <b>Program :</b> Software Engineer<br><b>Subject credit :</b> 3 (x-x-x)
+                        </p>
+                        <p>
+                            <b>Description: </b> None
+                        </p>
+                        <p>
+                            <b>Lecturer: </b><br>
+                            <b>Link: </b> https://se.kmitl.ac.th/program/curriculum
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/static/kmitl.png" alt="KMITL Logo" />
+            </div>
+            <div class="footer-text">
+                <p>© 2022 Software Engineering, King Mongkut's Institute of Technology Ladkrabang</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=100066929134562" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="/static/facebook.png" alt="Facebook" />
+                </a>
+                <a href="https://instagram.com/kmitl.esa.official?igshid=MzMyNGUyNmU2YQ==" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="/static/instagram.png" alt="Instagram" />
+                </a>
+                <a href="https://line.me/ti/g2/yQ2E7xZwpzkG7lMCOfNQE1KKCT-S9yiAmGPXNw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                    target="_blank" rel="noopener noreferrer">
+                    <img src="/static/line.png" alt="Line" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var coll = document.querySelectorAll(".collapsible");
+            coll.forEach(function(collapsible) {
+                collapsible.addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                    updateParentMaxHeights(this);
+                });
+            });
+
+            function updateParentMaxHeights(element) {
+                while (element) {
+                    var parentCollapsibleContent = element.closest('.content');
+                    if (parentCollapsibleContent) {
+                        parentCollapsibleContent.style.maxHeight = 'none';
+                        var totalHeight = 0;
+                        Array.from(parentCollapsibleContent.children).forEach(function(child) {
+                            totalHeight += child.scrollHeight;
+                        });
+                        parentCollapsibleContent.style.maxHeight = totalHeight + "px";
+                        element = parentCollapsibleContent.closest('.collapsible');
+                    } else {
+                        break;
+                    }
+                }
+            }
+        });
+    </script> 
+</body>
+</html>

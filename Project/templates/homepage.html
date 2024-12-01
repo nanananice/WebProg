@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="mainbody">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineer | KMITL</title>
+    <link rel="icon" type="image/x-icon" href="/static/sehead.png">
+    <link rel="stylesheet" href="/static/maincss.css">
+    <script defer src="/static/script.js"></script>
+    <script>
+        function toggleMenu() {
+            var navDrawer = document.getElementById("nav-links");
+            var navOverlay = document.getElementById("nav-overlay");
+
+            if (navDrawer && navOverlay) {
+                if (navDrawer.style.left === "0px") {
+                    navDrawer.style.left = "-250px";
+                    navOverlay.style.display = "none";
+                } else {
+                    navDrawer.style.left = "0px"; 
+                    navOverlay.style.display = "block";
+                }
+            } else {
+                console.error('Element(s) not found!');
+            }
+        }
+        window.addEventListener('resize', function () {
+        if (window.innerWidth > 780) {
+            var navLinks = document.getElementById("nav-links");
+            var navOverlay = document.getElementById("nav-overlay");
+            navLinks.style.left = "-250px";
+            navOverlay.style.display = "none";
+        }
+    });
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'trans');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div class="navbar">
+        <a href="/" class="navbar-logo"><img src="/static/se.png" alt="Logo"></a>
+        <div id="trans"></div>
+        <button class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="/news">News</a>
+            <a href="/addmission1">Admission</a>
+
+            <a href="/about">About</a>
+            <a href="/curriculum">Curriculum</a>
+            <a href="/reservepage">Reserve Co-Working Space</a>
+            <a href="{{ '/logout' if is_logged_in else '/login' }}" class="login-button">{{ 'Logout' if is_logged_in else 'Login' }}</a>
+        </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay" onclick="toggleMenu()"></div>
+    <div class="mainbigdiv">
+        <div class="maindiv">
+            <img src="/static/uni_view.gif" alt="university_view" class="imgsize">
+            <div class="text-overlay">
+                <h1>Software Engineering Program</h1>
+                <h2>King Mongkut's Institute of Technology Ladkrabang</h2>
+            </div>
+        </div>
+        <div class="maindiv">
+            <div class="body-container">
+                <a href="/news" class="bodydiv">
+                    <img src="/static/news.png" alt="news" class="imginbodydiv">
+                    <div class="inbodydiv">
+                        <h3>News</h3>
+                        <p>Follow up on our latest news.</p>
+                    </div>
+                    <div class="findoutmore">
+                        <p>Find out more -></p>
+                    </div>
+                </a>
+                <a href="/addmission1" class="bodydiv">
+                    <img src="/static/admission.png" alt="admission" class="imginbodydiv">
+                    <div class="inbodydiv">
+                        <h3>Admission</h3>
+                        <p>Follow for admission</p>
+                    </div>
+                    <div class="findoutmore">
+                        <p>Find out more -></p>
+                    </div>
+                </a>
+                <a href="/about" class="bodydiv">
+                    <img src="/static/about.png" alt="about" class="imginbodydiv">
+                    <div class="inbodydiv">
+                        <h3>About</h3>
+                        <p>About us</p>
+                    </div>
+                    <div class="findoutmore">
+                        <p>Find out more -></p>
+                    </div>
+                </a>
+                <a href="/curriculum" class="bodydiv">
+                    <img src="/static/cir.png" alt="curriculum" class="imginbodydiv">
+                    <div class="inbodydiv">
+                        <h3>Curriculum</h3>
+                        <p>View about our curriculum</p>
+                    </div>
+                    <div class="findoutmore">
+                        <p>Find out more -></p>
+                    </div>
+                </a>
+                <a href="/reservepage" class="bodydiv">
+                    <img src="/static/co.png" alt="co-reserve" class="imginbodydiv">
+                    <div class="inbodydiv">
+                        <h3>CO-Working reserving</h3>
+                        <p>Reserve for co-working space</p>
+                    </div>
+                    <div class="findoutmore">
+                        <p>Find out more -></p>
+                    </div>
+                </a>
+            </div>
+            <div class="control goleft" onclick="moveLeft()">&#10094;</div>
+            <div class="pagination"></div>
+            <div class="control goright" onclick="moveRight()">&#10095;</div>
+        </div>
+        <div class="maindiv">
+            <div class="contact-container">
+                <div class="contactus">
+                    <div class="contactword">
+                        <h2>Need Help?</h2>
+                        <h3>Contact US</h3>
+                    </div>
+                    <div class="incontactus">
+                        <a class="smallcontactus" href="https://maps.app.goo.gl/DcKWPgAmbvz4EzSZ7">
+                            <div class="contactlogo">
+                                <div class="imgcontact trin-trin"><img src="/static/marker.png" class="imgsize" alt="address"></div>
+                            </div>
+                            <div class="incontactword">
+                                <h4>ADDRESS</h4>
+                            </div>
+                        </a>
+                        <a class="smallcontactus" href="tel:097-039-5533">
+                            <div class="contactlogo">
+                                <div class="imgcontact trin-trin"><img src="/static/phone.png" class="imgsize" alt="phone"></div>
+                            </div>
+                            <div class="incontactword">
+                                <h4>PHONE</h4>
+                            </div>
+                        </a>
+                        <a class="smallcontactus" href="mailto:admin@kmitl.ac.th">
+                            <div class="contactlogo">
+                                <div class="imgcontact trin-trin"><img src="/static/email.png" class="imgsize" alt="email"></div>
+                            </div>
+                            <div class="incontactword">
+                                <h4>EMAIL</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="/static/kmitl.png" alt="KMITL Logo" />
+                </div>
+                <div class="footer-text">
+                    <p>© 2022 Software Engineering, King Mongkut's Institute of Technology Ladkrabang</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=100066929134562" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/static/facebook.png" alt="Facebook" />
+                    </a>
+                    <a href="https://instagram.com/kmitl.esa.official?igshid=MzMyNGUyNmU2YQ==" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/static/instagram.png" alt="Instagram" />
+                    </a>
+                    <a href="https://line.me/ti/g2/yQ2E7xZwpzkG7lMCOfNQE1KKCT-S9yiAmGPXNw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="/static/line.png" alt="Line" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Software Engineer | KMITL</title>
+    <link rel="stylesheet" type="text/css" href="/static/news-detail.css">
+    <link rel="icon" type="image/x-icon" href="/static/se.png">
+    <script>
+        function toggleMenu() {
+            var navDrawer = document.getElementById("nav-links");
+            var navOverlay = document.getElementById("nav-overlay");
+
+            if (navDrawer && navOverlay) {
+                if (navDrawer.style.left === "0px") {
+                    navDrawer.style.left = "-250px";
+                    navOverlay.style.display = "none";
+                } else {
+                    navDrawer.style.left = "0px"; 
+                    navOverlay.style.display = "block";
+                }
+            } else {
+                console.error('Element(s) not found!');
+            }
+        }
+        window.addEventListener('resize', function () {
+        if (window.innerWidth > 780) {
+            var navLinks = document.getElementById("nav-links");
+            var navOverlay = document.getElementById("nav-overlay");
+            navLinks.style.left = "-250px";
+            navOverlay.style.display = "none";
+        }
+    });
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'trans');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div class="navbar">
+        <a href="/" class="navbar-logo"><img src="/static/se.png" alt="Logo"></a>
+        <div id="trans"></div>
+        <button class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="/news">News</a>
+            <a href="/addmission1">Admission</a>
+
+            <a href="/about">About</a>
+            <a href="/curriculum">Curriculum</a>
+            <a href="/reservepage">Reserve Co-Working Space</a>
+            <a href="{{ '/logout' if is_logged_in else '/login' }}" class="login-button">{{ 'Logout' if is_logged_in else 'Login' }}</a>
+        </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay" onclick="toggleMenu()"></div>
+    <div class="news-detail-container">
+        <h1>Software Engineer Skill Mapping Workshop</h1>
+        <img src="/static/news1.png" alt="Software Engineer Skill Mapping Workshop" class="news-detail-image">
+        <p class="news-date">Posted on: February 10, 2023</p>
+        <h2>Hello, Students of Software Engineering Program</h2>
+        <p class="news-content">
+            Since, the program provide several specialization option in the second half (Year 3 and 4) of the program.
+            <br>
+            We realize that providing guildelines for the specialization is crucial for 2nd students to choose their own specialize.
+            <br>
+            So KMITL and software engineering program presenting, "Software Engineer Skill Mapping Workshop"...
+        </p>
+        <h2>Timing :</h2>
+        <p class="news-content">
+            The workshop will be held on every Friday from 10th Febuary to 3rd March at 804 ECC building from 9 AM to 12 PM.
+        </p>
+        <h2>Topic:</h2>
+        <p class="news-content">
+            The workshop topic will be:
+            <br>
+            In Friday 10th Febuary and 17th Febuary - Topic about Metavearse : HTML5 and A-Frame technology.
+            <br>
+            In Friday 24th Febuary and 3rd March - Topic about Industrial IoT : IoT and Scada technology.
+            <br>
+            The workshop will be open for second year student of Software Engineering Program and any students interrest in the topic.
+        </p>
+        <h2>For other who may interest :</h2>
+        <p class="news-content">
+            The workshop will be stream via Microsoft Team:
+            <br>
+            In Friday 10th Febuary Metavearse Work Shop 1 : <a href="https://teams.microsoft.com/l/meetup-join/19%3aXckJUwHtgbsoPiOF0aDMdY9w3k312BqPggFVQJ8AU3k1%40thread.tacv2/1675947033571?context=%7b%22Tid%22%3a%22fd206715-7509-4ae5-9b96-76bb97886a84%22%2c%22Oid%22%3a%22d45c4a92-d8e6-40a5-ae69-ff34a36b11b9%22%7d"> Microsoft Team Link</a>
+            <br>
+            In Friday 17th Febuary Metavearse Work Shop 2 : <a href="https://teams.microsoft.com/l/meetup-join/19%3aXckJUwHtgbsoPiOF0aDMdY9w3k312BqPggFVQJ8AU3k1%40thread.tacv2/1676527777046?context=%7b%22Tid%22%3a%22fd206715-7509-4ae5-9b96-76bb97886a84%22%2c%22Oid%22%3a%22d45c4a92-d8e6-40a5-ae69-ff34a36b11b9%22%7d"> Microsoft Team Link</a>
+        </p>
+        <a href="/news" class="back-button">Back to News</a>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/static/kmitl.png" alt="KMITL Logo" />
+            </div>
+            <div class="footer-text">
+                <p>© 2022 Software Engineering, King Mongkut's Institute of Technology Ladkrabang</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=100066929134562" target="_blank" rel="noopener noreferrer">
+                    <img src="/static/facebook.png" alt="Facebook" />
+                </a>
+                <a href="https://instagram.com/kmitl.esa.official?igshid=MzMyNGUyNmU2YQ==" target="_blank" rel="noopener noreferrer">
+                    <img src="/static/instagram.png" alt="Instagram" />
+                </a>
+                <a href="https://line.me/ti/g2/yQ2E7xZwpzkG7lMCOfNQE1KKCT-S9yiAmGPXNw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener noreferrer">
+                    <img src="/static/line.png" alt="Line" />
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>

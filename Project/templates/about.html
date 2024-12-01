@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Software Engineer | KMITL</title>
+    <link rel="stylesheet" type="text/css" href="/static/news-detail.css">
+    <link rel="icon" type="image/x-icon" href="/static/se.png">
+    <script>
+        function toggleMenu() {
+            var navDrawer = document.getElementById("nav-links");
+            var navOverlay = document.getElementById("nav-overlay");
+
+            if (navDrawer && navOverlay) {
+                if (navDrawer.style.left === "0px") {
+                    navDrawer.style.left = "-250px";
+                    navOverlay.style.display = "none";
+                } else {
+                    navDrawer.style.left = "0px"; 
+                    navOverlay.style.display = "block";
+                }
+            } else {
+                console.error('Element(s) not found!');
+            }
+        }
+        window.addEventListener('resize', function () {
+        if (window.innerWidth > 780) {
+            var navLinks = document.getElementById("nav-links");
+            var navOverlay = document.getElementById("nav-overlay");
+            navLinks.style.left = "-250px";
+            navOverlay.style.display = "none";
+        }
+    });
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'trans');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div class="navbar">
+        <a href="/home" class="navbar-logo"><img src="/static/se.png" alt="Logo"></a>
+        <div id="trans"></div>
+        <button class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="/news">News</a>
+            <a href="/addmission1">Admission</a>
+            <a href="/about">About</a>
+            <a href="/curriculum">Curriculum</a>
+            <a href="/reservepage">Reserve Co-Working Space</a>
+            <a href="{{ '/logout' if is_logged_in else '/login' }}" class="login-button">{{ 'Logout' if is_logged_in else 'Login' }}</a>
+        </div>
+    </div>
+    <div class="nav-overlay" id="nav-overlay" onclick="toggleMenu()"></div>
+    <div class="news-detail-container">
+        <h1>About US</h1>
+        <h2>What is Software Engineering?</h2>
+        <p class="news-content">
+            Software engineering (SE) is an engineering discipline concerning all aspects of software production, including software analysis, design, development, testing, and deployment. 
+            SE requires profound abstract and logical thinking and the application of mathematics, logic, and computer science in order to produce efficient and reliable software with the available resources.
+        </p>
+        <h2>Why study Software Engineering?</h2>
+        <p class="news-content">
+            It is hard to overstate the ubiquity of software nowadays. Every computer system is governed by software. 
+            Almost every human activity involves software in some form. Undoubtedly software industry is one of the largest and fastest growing industries in the world. 
+            Consequently, skilled software engineers are in high demand worldwide. 
+            As software becomes more and more complex, the programming skills and the rudimentary knowledge of software engineering that students obtained from traditional computer science and computer engineering curriculums are insufficient. 
+            The development of real-world software applications requires the skills in analysing the problem domain and the customer's requirement and the skills in designing the software from the topmost level down to the implementation level. 
+            Moreover, a software engineer must be able to use proper tools, techniques, and methodologies in order to produce the software in an efficient manner.
+        </p>
+        <h2>Careers in Software Engineering</h2>
+        <p class="news-content">
+            There are abundant career opportunities for graduates from the software engineering program.
+            <br>
+            - Software engineers, software architects, and software developers on various platforms, including enterprise 
+              software, web applications, mobile applications, games, embedded applications, etc.
+            <br>    
+            - Analysts and designers of IT systems, IT consultants
+            <br>
+            - Software entrepreneurs, with strong foundation in computer science, mathematics, and software engineering 
+              principles, graduates of the SE program may continue their studies at postgraduate level in various software engineering or computing related fields in universities worldwide.
+            
+        </p>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/static/kmitl.png" alt="KMITL Logo" />
+            </div>
+            <div class="footer-text">
+                <p>© 2022 Software Engineering, King Mongkut's Institute of Technology Ladkrabang</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=100066929134562" target="_blank" rel="noopener noreferrer">
+                    <img src="/static/facebook.png" alt="Facebook" />
+                </a>
+                <a href="https://instagram.com/kmitl.esa.official?igshid=MzMyNGUyNmU2YQ==" target="_blank" rel="noopener noreferrer">
+                    <img src="/static/instagram.png" alt="Instagram" />
+                </a>
+                <a href="https://line.me/ti/g2/yQ2E7xZwpzkG7lMCOfNQE1KKCT-S9yiAmGPXNw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" rel="noopener noreferrer">
+                    <img src="/static/line.png" alt="Line" />
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>

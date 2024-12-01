@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Software Engineer | KMITL</title>
+        <link rel="icon" type="image/x-icon" href="/static/sehead.png">    
+    </head>
+    <body  data-logged-in="{{ is_logged_in }}">
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en'}, 'trans');
+            }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <div class="navbar">
+            <a href="/" class="navbar-logo"><img src="/static/se.png" alt="Logo"></a>
+            <div id="trans"></div>
+            <button class="hamburger-menu" onclick="toggleMenu()">
+                &#9776;
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="/news">News</a>
+                <a href="/addmission1">Admission</a>
+                <a href="/about">About</a>
+                <a href="/curriculum">Curriculum</a>
+                <a href="/reservepage">Reserve Co-Working Space</a>
+                <a href="{{ '/logout' if is_logged_in else '/login' }}" class="login-button">{{ 'Logout' if is_logged_in else 'Login' }}</a>
+            </div>
+        </div>
+        <div class="nav-overlay" id="nav-overlay" onclick="toggleMenu()"></div>
+        <div class="content">
+            <div id="datetime-display">
+                <p id="current-datetime">Current Date and Time: </p>
+            </div>
+            <div class="buttons-container">
+                <div id="date-buttons">
+
+                </div>
+                <div id="time-slots">
+
+                </div>
+            </div>    
+            <div id="form-container">   
+
+            </div>
+        </div>    
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="/static/kmitl.png" alt="KMITL Logo" />
+                </div>
+                <div class="footer-text">
+                    <p>© 2022 Software Engineering, King Mongkut's Institute of Technology Ladkrabang</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=100066929134562" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/static/facebook.png" alt="Facebook" />
+                    </a>
+                    <a href="https://instagram.com/kmitl.esa.official?igshid=MzMyNGUyNmU2YQ==" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="/static/instagram.png" alt="Instagram" />
+                    </a>
+                    <a href="https://line.me/ti/g2/yQ2E7xZwpzkG7lMCOfNQE1KKCT-S9yiAmGPXNw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                        target="_blank" rel="noopener noreferrer">
+                        <img src="/static/line.png" alt="Line" />
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <link rel="stylesheet" type="text/css" href="/static/reserve.css">
+        <script src="/static/datetime.js"></script>    
+        <script>
+            function toggleMenu() {
+                var navDrawer = document.getElementById("nav-links");
+                var navOverlay = document.getElementById("nav-overlay");
+
+                if (navDrawer && navOverlay) {
+                    if (navDrawer.style.left === "0px") {
+                        navDrawer.style.left = "-250px";
+                        navOverlay.style.display = "none";
+                    } else {
+                        navDrawer.style.left = "0px"; 
+                        navOverlay.style.display = "block";
+                    }
+                } else {
+                    console.error('Element(s) not found!');
+                }
+            }
+            window.addEventListener('resize', function () {
+            if (window.innerWidth > 780) {
+                var navLinks = document.getElementById("nav-links");
+                var navOverlay = document.getElementById("nav-overlay");
+                navLinks.style.left = "-250px";
+                navOverlay.style.display = "none";
+            }
+        });
+        </script>
+    </body>
+</html>

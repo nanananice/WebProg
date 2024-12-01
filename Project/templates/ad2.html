@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/admission.css">
+    <link rel="stylesheet" href="/static/maincss.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="background-color: white;">
+
+    <div class="navbar">
+        <a href="/" class="navbar-logo"><img src="/static/se.png" alt="Logo"></a>
+        <div class="nav-links">
+            <a href="/news">News</a>
+            <a href="/addmission1">Admission</a>
+
+            <a href="/about">About</a>
+            <a href="/curriculum">Curriculum</a>
+            <a href="/reservepage">Reserve Co-Working Space</a>
+            <a href="{{ '/logout' if is_logged_in else '/login' }}" class="login-button">{{ 'Logout' if is_logged_in else 'Login' }}</a>
+        </div>
+    </div>
+
+    <br><br><br><br>
+    <div class="content-container">
+    <div class="tab">
+        <a href="/addmission1" class="tablinks">Admission Paper 1</a>
+        <a href="/addmission2" class="tablinks">Admission Paper 2</a>
+    </div>
+
+    <div class="admissionPaper1">
+        <div class="richtext"><p style="text-align:center"><img alt="About Us – ตราสัญลักษณ์ – School of Engineering" src="https://engineer.kmitl.ac.th/wp-content/uploads/2019/03/logo02-300x270.png" style="height:135px; width:150px"></p>
+
+            <p style="text-align:center">Announcement Direct Admissions 1-1 (Early Round)</p>
+            
+            <p style="text-align:center">for International Students (non-holders of Thai passport)</p>
+            
+            <p style="text-align:center">Bachelor of Engineering (International Programs) Academic Year 2024</p>
+            
+            <p style="text-align:center">School of Engineering, King Mongkut’s Institute of Technology Ladkrabang (KMITL)</p>
+            
+            <p style="text-align:center">------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;School of Engineering, King Mongkut's Institute of Technology Ladkrabang invites qualified applicants to apply for admissions to the School of Engineering in 4 years Bachelor's Degree Programs, 5 years Unified Bachelor's &amp; Master's Degree Program (KMITL - AIT) and 5 years Unified Bachelor's &amp; Master's Degree Program (KMITL - CMKL) for Academic Year 2024 (beginning in August 2024), and 4 years and 5 years Unified Bachelor's &amp; Master's Degree Program (KMITL - NIDA). This round of admissions is opened to all applicants with excellent academic backgrounds. Selection of qualified candidates is based on the applicant's academic records, standardized test scores, and English proficiency test results, along with a personal statement, letters of recommendation, past academic activities, the interview and other supplementary documents.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>1. Programs and Number of Acceptances </strong></p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<u>Selection Procedure:</u></p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1. You may apply up to a maximum of 3 programs choices as listed in 1.1. Direct Admissions 1-1 (Early Round) : 4 years Bachelor's Degree Programs. Please specify the ranking when considering the application.</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2. (Optional) After you have completely applied to program 1.1 and paid for the application fee payment, you may apply to the lists of 1.2 or 1.3 Direct Admissions 1-1 (Early Round) : 5 years Unified Bachelor's &amp; Master's Degree Program KMITL - AIT or KMITL - CMKL</p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>1.1 Direct Admissions 1-1 (Early Round)</strong><strong> : </strong>4 years Bachelor's Degree Programs</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;This is a minimum target number of accepted students for academic year 2024.</p>
+            
+            <p>&nbsp;</p>
+            
+            <table align="center" border="1" cellpadding="1" cellspacing="1">
+                <tbody>
+                    <tr>
+                        <td style="text-align:center"><strong>No.</strong></td>
+                        <td style="text-align:center"><strong>Programs</strong></td>
+                        <td style="text-align:center"><strong>Persons</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">1</td>
+                        <td>
+                        <p style="text-align:center">Biomedical Engineering</p>
+                        </td>
+                        <td style="text-align:center">40</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">2</td>
+                        <td>
+                        <p style="text-align:center">Chemical Engineering&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                        </td>
+                        <td style="text-align:center">25</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">Civil Engineering</td>
+                        <td style="text-align:center">30</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">4</td>
+                        <td style="text-align:center">Computer Engineering</td>
+                        <td style="text-align:center">30</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">5</td>
+                        <td style="text-align:center">Electrical Engineering – Electrical Power major</td>
+                        <td style="text-align:center">20</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">6</td>
+                        <td style="text-align:center">Electrical Engineering – Mechatronics major</td>
+                        <td style="text-align:center">20</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">7</td>
+                        <td style="text-align:center">Engineering Management and Entrepreneurship</td>
+                        <td style="text-align:center">25</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">8</td>
+                        <td style="text-align:center">Energy Engineering</td>
+                        <td style="text-align:center">20</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">9</td>
+                        <td style="text-align:center">Financial Engineering</td>
+                        <td style="text-align:center">25</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">Industrial Engineering and Logistics Management</td>
+                        <td style="text-align:center">30</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">11</td>
+                        <td style="text-align:center">Mechanical Engineering</td>
+                        <td style="text-align:center">30</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">12</td>
+                        <td style="text-align:center">Robotics &amp; AI Engineering</td>
+                        <td style="text-align:center">50</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">13</td>
+                        <td style="text-align:center">Software Engineering</td>
+                        <td style="text-align:center">50</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Remark: *The minimum number of accepted applicants may subject to change if candidates' qualification does not meet the programs' minimum requirements.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>1.2 Direct Admissions 1-1 (Early Round): </strong>5 years Unified Bachelor's &amp; Master's Degree Program (KMITL - AIT)</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Students will spend the first seven (7) semesters (3.5 years) at KMITL for bachelor courses, and do the 8th semester of Bachelor Capstone Projects at Asian Institute of Technology (AIT) , while at the same time do the Master's program at AIT, credits earned from which will be transferred to the bachelor's degree, students will have the opportunity to complete the master program in 3 semesters and 1 inter-semester (1.5 years).</p>
+            
+            <p>&nbsp;</p>
+            
+            <table align="center" border="1" cellpadding="1" cellspacing="1">
+                <tbody>
+                    <tr>
+                        <td style="text-align:center"><strong>No.</strong></td>
+                        <td style="text-align:center"><strong>Programs</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">1</td>
+                        <td>
+                        <p style="text-align:center">Biomedical Engineering</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">2</td>
+                        <td style="text-align:center">Civil Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">Industrial Engineering and Logistics Management</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">4</td>
+                        <td style="text-align:center">Robotics &amp; AI Engineering</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>1.3 Direct Admissions 1-1(Early Round): </strong>5 years Unified Bachelor's &amp; Master's Degree Program (KMITL- CMKL)</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Students will spend the first 6 semesters (3 years) at KMITL for bachelor courses, and do the 7th - 8th semester of Bachelor Capstone Projects at CMKL University (CMKL) and School of Engineering, King Mongkut's Institute of Technology Ladkrabang (KMITL) to graduate with a Bachelor's degree at the end of Year 4 at KMITL. The coursework of Master's Degree will start from 7th semester and finish with a Master's degree at the end of Year 5.</p>
+            
+            <p>&nbsp;</p>
+            
+            <table align="center" border="1" cellpadding="1" cellspacing="1">
+                <tbody>
+                    <tr>
+                        <td style="text-align:center"><strong>No.</strong></td>
+                        <td style="text-align:center"><strong>Programs</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">1</td>
+                        <td>
+                        <p style="text-align:center">Biomedical Engineering</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">2</td>
+                        <td style="text-align:center">Chemical Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">Civil Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">4</td>
+                        <td style="text-align:center">Computer Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">5</td>
+                        <td style="text-align:center">Electrical Engineering – Electrical Power major</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">6</td>
+                        <td style="text-align:center">Electrical Engineering – Mechatronics major</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">7</td>
+                        <td style="text-align:center">Engineering Management and Entrepreneurship</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">8</td>
+                        <td style="text-align:center">Energy Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">9</td>
+                        <td style="text-align:center">Industrial Engineering and Logistics Management</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">Mechanical Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">11</td>
+                        <td style="text-align:center">Robotics &amp; AI Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">12</td>
+                        <td style="text-align:center">Software Engineering</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>2. Application Requirements</strong></p>
+            
+            <p><strong>** Applicants must be international students (non-holders of Thai passport) **</strong></p>
+            
+            <p><br>
+            <strong>2.1 Bachelor's Requirements (Based on KMITL)</strong></p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>2.1.1 Educational background</strong></p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The applicant must satisfy at least one of the following requirements:</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1) Graduated or studying in Matthayom 6.</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2) Graduated in qualification equivalent to Matthayom 6 as approved by the Ministry of Education. (The applicants who submit this educational background, please contact SIIE office.)</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3) Graduated or studying at an accredited college or higher-education institution in Thailand or aboard.</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The applicant must provide an official final transcript and their official high school diplomas and/or certificates of completion from their school before the start of Academic Year 2024.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>&nbsp;2.1.2 Academics Record</strong></p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The applicant should submit at least one of the following standardized test results and obtain a score which meets the minimum requirements as specified below:</p>
+            
+            <p>&nbsp;</p>
+            
+            <table align="center" border="1" cellpadding="1" cellspacing="1">
+                <tbody>
+                    <tr>
+                        <td rowspan="2" style="text-align:center"><strong>Program</strong></td>
+                        <td colspan="8">
+                        <p style="text-align:center"><strong>Standardized Test Results</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p style="text-align:center"><strong>SAT I</strong></p>
+            
+                        <p style="text-align:center"><strong>or</strong></p>
+                        </td>
+                        <td>
+                        <p style="text-align:center"><strong>GSAT</strong></p>
+            
+                        <p style="text-align:center"><strong>or</strong></p>
+                        </td>
+                        <td>
+                        <p style="text-align:center"><strong>School Letter</strong></p>
+            
+                        <p style="text-align:center"><strong>or</strong></p>
+                        </td>
+                        <td>
+                        <p style="text-align:center"><strong>ACT</strong></p>
+            
+                        <p style="text-align:center"><strong>or</strong></p>
+                        </td>
+                        <td colspan="2">
+                        <p style="text-align:center"><strong>IB Diploma</strong></p>
+            
+                        <p style="text-align:center"><strong>or</strong></p>
+                        </td>
+                        <td>
+                        <p style="text-align:center"><strong>Certificate</strong></p>
+            
+                        <p style="text-align:center"><strong>or</strong></p>
+                        </td>
+                        <td style="text-align:center"><strong>Any national higher education board exam result</strong></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p style="text-align:center">Biomedical Engineering</p>
+                        </td>
+                        <td rowspan="13" style="text-align:center">1020</td>
+                        <td rowspan="13" style="text-align:center">1020</td>
+                        <td rowspan="13">
+                        <p style="text-align:center">GPA<br>
+                        at least 5 semesters&nbsp;in</p>
+            
+                        <p style="text-align:center">the class rank</p>
+            
+                        <p style="text-align:center">of 75th percentile</p>
+                        </td>
+                        <td rowspan="13">
+                        <p style="text-align:center">19</p>
+                        </td>
+                        <td colspan="2" rowspan="13" style="text-align:center">29</td>
+                        <td colspan="1" rowspan="12">
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">certificate showing excellent performance from any academic activity provided by School of Engineering – KMITL</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+                        </td>
+                        <td rowspan="13">
+                        <p style="text-align:center">A Level, Gaokao, GAT/PAT, TGAT/TPAT National Exam</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Chemical Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Civil Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Computer Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Electrical Engineering – Electrical Power major</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Electrical Engineering – Mechatronics major</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Engineering Management and Entrepreneurship</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Energy Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Industrial Engineering and Logistics Management</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Mechanical Engineering</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Robotics &amp; AI Engineering</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p style="text-align:center">Financial Engineering *</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">Software Engineering *</td>
+                        <td style="text-align:center">**</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p><strong>Remark: *</strong> The applicants for <strong>Financial Engineering </strong>and <strong>Software Engineering</strong> are required to meet one of these additional requirements.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- SAT or GSAT Math score of 600 or higher<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- or SAT subject test Math Level 1 or Math Level 2 score of 600 or higher<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- or ACT Math score of 23 or higher<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- or IB Diploma score for a subject in Mathematics with a score of 5 or higher<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- or AP test for a subject in Mathematics with a score of 4 or higher<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- or A-Level or AS-Level for a subject in Mathematics with grade B or above&nbsp;<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- or A-Level Mathematics 1 (TCAS) with a score of 30 or higher<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- or Cumulative GPA of all Math subjects in high school at least 3 out of 4 (or equivalent)</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>**</strong> For<strong> Software Engineering</strong> Certificate provided by School of Engineering – KMITL <strong>*can not*</strong> be used as a substitution of any standardized test results, however it can be submitted for consideration as additional document.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>2.1.3 Language Requirement (for non-native English speakers)</strong></p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The applicant should submit at least one of the following English proficiency Test score and obtain a score which meets the minimum requirement specified below:</p>
+            
+            <p>&nbsp;</p>
+            
+            <table align="center" border="1" cellpadding="1" cellspacing="1">
+                <tbody>
+                    <tr>
+                        <td>
+                        <p style="text-align:center"><strong>English Proficiency Test</strong></p>
+                        </td>
+                        <td style="text-align:center"><strong>Minimum Score</strong></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p style="text-align:center">TOEFL – paper-based</p>
+                        </td>
+                        <td style="text-align:center">550</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p style="text-align:center">TOEFL – CBT</p>
+                        </td>
+                        <td style="text-align:center">213</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p style="text-align:center">TOEFL – IBT</p>
+                        </td>
+                        <td style="text-align:center">79</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p style="text-align:center">IELTS</p>
+                        </td>
+                        <td style="text-align:center">6</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p style="text-align:center">Cambridge English Exams FCE or CAE or CPE</p>
+                        </td>
+                        <td style="text-align:center">170</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p style="text-align:center">IB – English A1 or A2</p>
+                        </td>
+                        <td style="text-align:center">4</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p style="text-align:center">IB – English B (HL)</p>
+                        </td>
+                        <td style="text-align:center">5</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">KMITL-TEP</td>
+                        <td style="text-align:center">B2</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>&nbsp;Remark</strong>: 1. Applicants who have an English proficiency score meeting with minimum or over requirement can be admitted without conditions (The score has to be valid not more than 2 years from the date of application deadline).</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2. Applicants who do not submit any English proficiency test score or have lower than the required can be conditionally accepted by enrolling in additional English as a Second Language (ESL) courses at KMITL in the first semester.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>2.1.4 Personal Statement</strong></p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Please write an essay (500 words or fewer) that demonstrates your ability to communicate your thoughts and your related experience in the field of study.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>2.1.5 Two Recommendation Letters</strong></p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The applicant should upload PDFs or JPG snapshots of the letters of recommendation from your advisors or teachers.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>2.2. Master's Requirements </strong></p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Recruited students are not guaranteed to be admitted to Unified Programs unless the requirements in section 2.2 are met. Those who are not admitted may continue their study in their Bachelor's program but will not be eligible for a Master's degree.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>2.2.1 Master's Requirements (Based on AIT) </strong>Decision of admission will be made by the end of 7th semester.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<u>Required Documents</u><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Transcripts or Grades Certificates 6 semesters from Bachelor 's Degree at KMITL<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Minimum Cumulative GPA of 2.75 on the scale of 4.0 or Grade B or 65% above<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Recommendation Letter from KMITL<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- English Test Result</p>
+            
+            <p>&nbsp;</p>
+            
+            <table border="1" cellpadding="1" cellspacing="1" style="margin-left:auto; margin-right:auto">
+                <tbody>
+                    <tr>
+                        <td>
+                        <p style="text-align:center"><br>
+                        <strong>English Proficiency Test</strong><br>
+                        &nbsp;</p>
+                        </td>
+                        <td style="text-align:center"><strong>Minimun Score</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">IELTS</td>
+                        <td style="text-align:center">6</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">TOEFL - paper - based</td>
+                        <td style="text-align:center">550</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">TOEFL - CBT</td>
+                        <td style="text-align:center">213</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">TOEFL - IBT</td>
+                        <td style="text-align:center">79</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">AIT English Entrance Test (AIT-EET)</td>
+                        <td style="text-align:center">6</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+            
+            <p><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*The score has to be within 2 years before the date of application deadline.</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Health Certificate issued by KMITL, medical officers or KMITL accredited physicians<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;- Copy of passport</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>2.2.2 Master's Requirements (Based on CMKL)</strong> Decision of admission will be made by the end of 5th semester.</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;At the end of the 5th Semester, the student is required to provide all the necessary documents, satisfy the English language requirements, and follow the admission procedure set out by CMKL (https://eic.cmkl.ac.th/admission).CMKL will evaluate the application and determine whether the student is provisionally admitted to the Master's program the student has applied for.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>3. Admissions Schedule</strong></p>
+            
+            <p>&nbsp;</p>
+            
+            <table align="center" border="1" cellpadding="1" cellspacing="1">
+                <tbody>
+                    <tr>
+                        <td style="text-align:center"><strong>Details</strong></td>
+                        <td style="text-align:center"><strong>Dates</strong></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p>1. Application filing and Application Fee Payment Period <a href="http://new.reg.kmitl.ac.th/admission/">http://new.reg.kmitl.ac.th/admission/</a></p>
+                        </td>
+                        <td style="text-align:center">Now – October 27, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p>2. Interview Candidate Notification</p>
+            
+                        <p><a href="http://new.reg.kmitl.ac.th/admission/">http://new.reg.kmitl.ac.th/admission/</a></p>
+                        </td>
+                        <td style="text-align:center">November 3, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p>3. Candidate Interview Date</p>
+                        </td>
+                        <td style="text-align:center">November 12, 2023</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p>4. Interview Result Announcement</p>
+            
+                        <p><a href="http://new.reg.kmitl.ac.th/admission/">http://new.reg.kmitl.ac.th/admission/</a></p>
+                        </td>
+                        <td>
+                        <p style="text-align:center">November 24, 2023</p>
+            
+                        <p style="text-align:center">&nbsp;</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p>5. TCAS Clearing House (for Thai Nationality only)</p>
+                        </td>
+                        <td style="text-align:center">February 6-7, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p>6.KMITL has announced the list of qualified candidates to study at KMITL</p>
+            
+                        <p>with the details of how to make advanced payment of tuition fees.</p>
+                        </td>
+                        <td style="text-align:center">February 14, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p>7. Enrollment Confirmation and Tuition Fee Payment</p>
+            
+                        <p><a href="http://new.reg.kmitl.ac.th/admission/">http://new.reg.kmitl.ac.th/admission/</a></p>
+                        </td>
+                        <td style="text-align:center">February 19-26, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>4. Application Submission</strong></p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>Step 1:</strong> Applicants must apply via online application system&nbsp;&nbsp;<a href="https://new.reg.kmitl.ac.th/admission/">https://new.reg.kmitl.ac.th/admission/</a></p>
+            
+            <p>( User guidance for application system <a href="https://drive.google.com/file/d/1DHWVayEjQtMde8hHcDTYHe3XzEyNZTta/view?usp=sharing">https://drive.google.com/file/d/1DHWVayEjQtMde8hHcDTYHe3XzEyNZTta/view?usp=sharing</a> )</p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>Step 2: </strong>Applicants must upload all necessary documents as the following in one pdf file(up to 4 MB in size only) to online application system with subject filename as <span style="color:#0000cc">Name of program No.1 youselected_Application ID_Full Name</span> (e.g. Biomedical Engineering_12345_Tittita Keawchu).</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1. Your application form<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2. A photocopy of the applicant's national identification card or passport<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3. Academic Records - High School Transcript, SAT, ACT, IB etc.<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;4. English Proficiency Test score - IELTS, TOEFL etc.<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;5. Two recommendation letters from teachers or supervisors.<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6. Personal Statement<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7. Portfolios Achievements (optional)<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;8. Placement test results (optional): submit available AP, IB Higher Level, A-Level, or any grade 12 equivalent placement test results. The policy and criteria for placement credits will be determined prior to the applicant's enrollment.<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;9. Certificate in any academic activities provided by School of Engineering – KMITL (optional)</p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>5. Tuition Fees and Enrollment Confirmation</strong></p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>5.1 The tuition fees for Bachelor's degree programs in Academic Year 2024 are as follows:</strong></p>
+            
+            <p>&nbsp;</p>
+            
+            <table align="center" border="1" cellpadding="1" cellspacing="1">
+                <tbody>
+                    <tr>
+                        <td style="text-align:center"><strong>No.</strong></td>
+                        <td style="text-align:center"><strong>Programs</strong></td>
+                        <td style="text-align:center"><strong>THB/Semester</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">1</td>
+                        <td>
+                        <p style="text-align:center">Biomedical Engineering</p>
+                        </td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">2</td>
+                        <td style="text-align:center">Chemical Engineering</td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">3</td>
+                        <td style="text-align:center">Civil Engineering</td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">4</td>
+                        <td style="text-align:center">Computer Engineering</td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">5</td>
+                        <td style="text-align:center">Electrical Engineering – Electrical Power major</td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">6</td>
+                        <td style="text-align:center">Electrical Engineering – Mechatronics major</td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">7</td>
+                        <td style="text-align:center">Engineering Management and Entrepreneurship</td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">8</td>
+                        <td style="text-align:center">Energy Engineering</td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">9</td>
+                        <td style="text-align:center">Financial Engineering</td>
+                        <td style="text-align:center">120,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">Industrial Engineering and Logistics Management</td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">11</td>
+                        <td style="text-align:center">Mechanical Engineering</td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">12</td>
+                        <td style="text-align:center">Robotics &amp; AI Engineering</td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center">13</td>
+                        <td style="text-align:center">Software Engineering</td>
+                        <td style="text-align:center">90,000</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>*</strong> For those programs doubling degrees with other, the tuition fees may be different.</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>**</strong> The fees for Financial Engineering program comprise of the tuition fee of 72,000 THB/Semester and the supplemental fee of 48,000 THB/Semester, which sum up to 120,000 THB/Semester.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>5.2 The tuition fees for Master's degree programs</strong></p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Tuition fees are subject to change according to AIT and CMKL policies. Scholarships may be applied.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>5.2.1 The tuition fees for Master's program at AIT</strong><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Student is required to pay the tuition fee directly to AIT during 8th - 10th semester. at the rate of 540,000 THB (covering tuition fees for capstone project, registration and credit).</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong>5.2.2 The tuition fees for Master's program at CMKL</strong><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Student is required to pay the tuition fee to CMKL at the subsidized rate of 90,000 THB/semester in Year 4 and 185,000 THB for each semester in Year 5.The students will also be required to pay additional required fees directly with CMKL.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>6. Scholarships</strong></p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Academic Excellence Freshmen Scholarship is offered to applicants with excellent academic performances to pursue their undergraduate education in the international programs, the School of Engineering at KMITL. The scholarship will be granted to 1st year students with exceptional academic records.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>Minimum Academic requirement:<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;● Achieved SAT General test composite score at least 85 world percentiles<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;● Achieved TOEFL score at least 550 (paper) or 213 (CBT), or 79 (IBT), or Achieve IELTS score at least 6.0.</p>
+            
+            <p>&nbsp;</p>
+            
+            <p><strong>7. Contact Information</strong><br>
+            For additional information of Admissions , please contact SIIE office, Faculty of Engineering, KMITL</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;● Phone: +66(0)934747468<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;● Line: @siie_kmitl<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;● Email: siie-admission@kmitl.ac.th<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;● Facebook: https://www.facebook.com/KMITL.SIIE</p>
+            
+            <p>For <u>more details in each program</u> , directly contact our Program Directors:</p>
+            
+            <p>●Software Engineering</p>
+            
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;o Contact person: Asst.Prof.Dr.Visit Hirankitti o Mobile Phone +(0)80454 9990<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;o Email: visit.hi@kmitl.acth<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;o Website:http://www.se.kmitl.ac.th<br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;o Facebook: https://www.facebook.com/sekmitl</p>
+            
+            <p style="text-align:center">Announced on September 28, 2023</p>
+            
+            <p>&nbsp;</p>
+            
+            <p>&nbsp;</p>
+            
+            <p style="text-align:right">(Associate Professor Dr.Anuwat Jangwanitlert)</p>
+            
+            <p style="text-align:right">Executive Vice President for Academic Affairs (Acting)</p>
+            
+            <p style="text-align:right">2022/12/07 Time 19:50:06 Non-PKI Server Sign-LN</p>
+            
+            <p style="text-align:right">Signature Code : MwAyA-DEANg-BBAEI-ANQBE</p></div>
+        </div>
+            <footer class="site-footer">
+                <div class="footer-container">
+                    <div class="footer-logo">
+                        <img src="/static/kmitl.png" alt="KMITL Logo" />
+                    </div>
+                    <div class="footer-text">
+                        <p>© 2022 Software Engineering, King Mongkut's Institute of Technology Ladkrabang</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=100066929134562" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="/static/facebook.png" alt="Facebook" />
+                        </a>
+                        <a href="https://instagram.com/kmitl.esa.official?igshid=MzMyNGUyNmU2YQ==" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="/static/instagram.png" alt="Instagram" />
+                        </a>
+                        <a href="https://line.me/ti/g2/yQ2E7xZwpzkG7lMCOfNQE1KKCT-S9yiAmGPXNw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+                            target="_blank" rel="noopener noreferrer">
+                            <img src="/static/line.png" alt="Line" />
+                        </a>
+                    </div>
+                </div>
+            </footer>
+</body>
+
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/login.css">
+    <title>Register</title>
+</head>
+<body>
+    <img src="/static/uni_view.jpg" alt="image" class="login__bg">
+    <div class="login">
+
+      <form action="/register" method="post" class="login__form" enctype="application/x-www-form-urlencoded">
+         {% if error %}
+        <p class="error-message" style="margin-left: 5%;">{{ error }}</p>
+         {% endif %}  
+         <h1 class="login__title">Register</h1>
+
+           <div class="login__inputs">
+              <div class="login__box">
+                 <input type="text" placeholder="Full Name" name="fullname" required class="login__input">
+    
+              </div>
+
+              <div class="login__box">
+                 <input type="email" placeholder="Email ID" name="email" required class="login__input">
+              
+              </div>
+
+              <div class="login__box">
+                 <input type="password" placeholder="Password" name="password" required class="login__input">
+               
+              </div>
+
+              <div class="login__box">
+                 <input type="password" placeholder="Confirm Password" name="confirm" required class="login__input">
+              </div>
+           </div>
+
+           <div class="login__check">
+              <div class="login__check-box">
+                 <input type="checkbox" class="login__check-input" id="terms-check">
+                 <label for="terms-check" class="login__check-label">I agree to the Terms & Conditions</label>
+              </div>
+           </div>
+
+           <button type="submit" class="login__button">Register</button>
+
+           <div class="login__register">
+              Already have an account? <a href="/">Login</a>
+           </div>
+        </form>
+    </div>
+</body>
+</html>

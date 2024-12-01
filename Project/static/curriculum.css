@@ -1,0 +1,298 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6; 
+    margin: 0;
+    background: #f0f0f0; 
+}
+
+.curriculum-container {
+    max-width: 1000px; 
+    margin: 40px auto; 
+    background: #fff; 
+    padding: 20px;
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.curriculum-container img {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 20px;
+}
+
+.curriculum-container li{
+    font-size : 14px;
+}
+
+.collapsible {
+    background-color: #969595;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    position: relative;
+    padding-right: 40px;
+}
+
+.collapsible::after {
+    content: '\25bc';
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease;
+}
+
+.collapsible.active::after {    
+    content: '\25b2';
+    transform: translateY(-50%) rotate(360deg); 
+}
+
+.active, .collapsible:hover {
+    background-color: #757575;
+}
+
+.content {
+    max-height: 0;
+    padding: 0 18px;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    transition: max-height 0.5s ease-out;
+}
+
+.collapsible.active + .content {
+    max-height: 10000px;
+    padding: 18px;
+}
+
+.inner-collapsible {
+    background-color: #969595;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+}
+
+.inner-collapsible::after {
+    content: '\25bc';
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.5s ease;
+}
+
+.inner-content {
+    max-height: 0;
+    padding: 0 15px;
+    overflow: hidden;
+    background-color: #d9edf7;
+    transition: max-height 0.5s ease-out;
+    margin-top: 5px;
+}
+
+
+.inner-collapsible.active + .inner-content {
+    max-height: 5000px; 
+    padding: 15px;
+}
+
+
+.site-footer {
+    width: 100%;
+    background-color: #f8f8f8; 
+    color: #333;
+    border-top: 1px solid #e4e4e4; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 100; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px; 
+}
+
+.footer-logo img {
+    height: 40px; 
+}
+
+.footer-text p {
+    margin: 0; 
+    font-size: 0.8em; 
+}
+
+.footer-social a img {
+    height: 50px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-left: 10px; 
+}
+
+.hamburger-menu {
+    padding-right: 50px;
+    background-color: transparent;
+    border: none;
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+}
+
+.navbar-logo {
+    margin-left: 20px;
+}
+
+.navbar .navbar-logo img {
+    height: 50px;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-links a {
+    display: block;
+    align-items: center;
+    height: 100%;
+    color: #f2f2f2;
+    padding: 20px 16px;
+    text-decoration: none;
+    line-height: 80px;
+}
+
+.nav-links a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.login-button {
+    display: flex;
+    height: 20%;
+    background-color: #5c6bc0;
+    border-radius: 20px;
+    color: white; 
+    padding: 8px 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.nav-links a.login-button:hover {
+    background-color: #3949ab;
+    color: white;
+}
+
+@media screen and (max-width: 780px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -250px; 
+        background-color: #FFF;
+        height: 100%;
+        width: 250px; 
+        overflow-x: hidden;
+        transition: 0.5s;
+        z-index: 15;
+        flex-direction: column;
+        background-color: #333;
+    }
+
+    .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+    }
+
+    .nav-links a {
+        color: #f2f2f2;
+        padding: 15px 20px; 
+        border-bottom: 1px solid #474747; 
+        text-align: left;
+        height: 10%;
+    }
+
+    .navbar a.login-button {
+        display: flex;
+        height: 10%;
+        border-radius: 20px;
+        color: white; 
+        align-items: center;
+        padding: 8px 15px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .nav-links {
+        display: block;
+    }
+}
+
+@media (max-width: 780px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        height: 100px;
+        padding: 10px 20px;
+    }
+
+    .footer-logo img, .footer-social a img {
+        height: 15px; 
+    }
+
+    .footer-text p {
+        font-size: 0.5em; 
+    }
+
+    .footer-social a {
+        margin: 5px 0; 
+    }
+}
